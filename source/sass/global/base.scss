@@ -1,0 +1,18 @@
+@use "./var.scss";
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: var.$small-font-size;
+  line-height: var.$small-font-height;
+}
+
+.page__container {
+  margin: 0 auto;
+  width: 320px;
+  background-color: var.$white;
+}

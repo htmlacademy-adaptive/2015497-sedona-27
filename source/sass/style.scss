@@ -1,1 +1,6 @@
-@import "./main-header.scss";
+@use "./global/fonts.scss";
+@use "./global/reset.scss";
+@use "./global/base.scss";
+@use "./global/visually-hidden.scss";
+@use "./global/var.scss";
+@use "./blocks/main-header.scss";
