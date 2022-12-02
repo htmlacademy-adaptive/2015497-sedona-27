@@ -1,0 +1,33 @@
+@use "../global/var.scss";
+@use "../global/mixins.scss";
+
+.search-hotel {
+  padding-bottom: 10px;
+}
+
+.serch-hotel__content {
+  padding: 38px 18px 49px;
+}
+
+.search-hotel__title {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-hotel__discription {
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
+}
+
+.search-hotel__button {
+  width: 100%;
+  padding: 16px 49px;
+
+  @include mixins.button;
+}
