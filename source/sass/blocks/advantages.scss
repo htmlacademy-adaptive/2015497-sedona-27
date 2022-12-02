@@ -1,0 +1,62 @@
+@use "../global/var.scss";
+
+.advantages__item {
+  background-color: var.$gray-light;
+}
+
+.advantages__item--image {
+  background-color: var.$blue;
+}
+
+.advantages__content {
+  padding: 37px 18px;
+}
+
+.advantages__content--image {
+  color: var.$white;
+}
+
+.advantages__title {
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__number {
+  margin-bottom: 17px;
+}
+
+.advantages__discription {
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
+}
+
+.advantages__discription--image {
+  color: var.$white;
+}
+
+.advantages__sublist {
+  padding: 23px 18px 46px;
+  background-color: var.$white;
+}
+
+.advantages__subitem {
+  padding-left: 47px;
+}
+
+.advantages__subitem:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.advantages__sublist__title {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.advantages__subdiscription {
+  text-align: left;
+}

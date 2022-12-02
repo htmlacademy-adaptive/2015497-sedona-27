@@ -5,6 +5,7 @@
 }
 
 img {
+  display: block;
   object-fit: contain;
 }
 
@@ -19,7 +20,7 @@ button {
   cursor: pointer;
 }
 
-li,
+ul,
 ol {
   margin: 0;
   padding: 0;
