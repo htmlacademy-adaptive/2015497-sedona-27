@@ -1,5 +1,10 @@
 @use "../global/var.scss";
 
+
+.main-header {
+  z-index: 1;
+}
+
 .main-nav {
   display: flex;
   gap: 25px;

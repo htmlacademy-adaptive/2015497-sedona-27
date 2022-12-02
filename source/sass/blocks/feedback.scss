@@ -1,0 +1,30 @@
+@use "../global/var.scss";
+
+.feedback {
+  padding: 0 20px;
+}
+
+.feedback__legend {
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.feedback__label {
+  margin-left: 16px;
+  color: var.$gray-dark;
+}
+
+.feedback__input {
+  padding: 16px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  background-color: var.$gray-input;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

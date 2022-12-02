@@ -1,6 +1,27 @@
 @use "../global/var.scss";
 
 .form-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 20px 28px;
   background: url("../../img/hero-bg.jpg") no-repeat;
 }
 
+.form-intro__hero {
+  margin-bottom: 103px;
+}
+
+.form-intro__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-transform: uppercase;
+}
+
+.form-intro__discription {
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
+}
