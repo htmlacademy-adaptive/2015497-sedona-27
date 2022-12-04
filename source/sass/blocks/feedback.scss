@@ -4,7 +4,16 @@
   padding: 0 20px;
 }
 
+.feedback__group {
+  margin-bottom: 34px;
+}
+
+.feedback__group-name {
+  margin-bottom: 39px;
+}
+
 .feedback__legend {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: var.$big-font-size;
   line-height: var.$big-font-height;
@@ -14,6 +23,7 @@
 
 .feedback__label {
   margin-left: 16px;
+  text-transform: uppercase;
   color: var.$gray-dark;
 }
 
@@ -27,4 +37,35 @@
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.feedback__input:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.feedback__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.feedback__control-label {
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+}
+
+.feedback__group-textarea {
+  margin-bottom: 56px;
+}
+
+.feedback__button {
+  padding: 16px 49px;
+  width: 100%;
+}
+
+.feedback__note {
+  display: block;
+  font-size: 12px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.6);
 }

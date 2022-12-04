@@ -62,7 +62,7 @@
         <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
 
           <!-- ФИО -->
-          <fieldset class="feedback__group">
+          <fieldset class="feedback__group feedback__group-name">
             <legend class="feedback__legend">Представьтесь:</legend>
             <label class="feedback__label" for="feedback-name">ИМЯ*:</label>
             <input class="feedback__input" type="text" id="feedback-name" placeholder="Пётр">
@@ -116,28 +116,28 @@
             <ul class="feedback__list">
               <li class="feedback__item">
                 <label class="feedback__control">
-                  <input class="visually-hidden feedback__control__input" type="checkbox" name="diablo" checked>
+                  <input class="visually-hidden feedback__control-input" type="checkbox" name="diablo" checked>
                   <span class="feedback__control-mark feedback__control-mark-checkbox"></span>
                   <span class="feedback__control-label">Мост Дьявола</span>
                 </label>
               </li>
               <li class="feedback__item">
                 <label class="feedback__control">
-                  <input class="visually-hidden feedback__control__input" type="checkbox" name="bell" checked>
+                  <input class="visually-hidden feedback__control-input" type="checkbox" name="bell" checked>
                   <span class="feedback__control-mark feedback__control-mark-checkbox"></span>
                   <span class="feedback__control-label">Гора-Колокол</span>
                 </label>
               </li>
               <li class="feedback__item">
                 <label class="feedback__control">
-                  <input class="visually-hidden feedback__control__input" type="checkbox" name="slide" checked>
+                  <input class="visually-hidden feedback__control-input" type="checkbox" name="slide" checked>
                   <span class="feedback__control-mark feedback__control-mark-checkbox"></span>
                   <span class="feedback__control-label">Слайд-парк</span>
                 </label>
               </li>
               <li class="feedback__item">
                 <label class="feedback__control">
-                  <input class="visually-hidden feedback__control__input" type="checkbox" name="rocks">
+                  <input class="visually-hidden feedback__control-input" type="checkbox" name="rocks">
                   <span class="feedback__control-mark feedback__control-mark-checkbox"></span>
                   <span class="feedback__control-label">Красные скалы</span>
                 </label>
@@ -146,15 +146,15 @@
           </fieldset>
 
           <!-- Свободное поле -->
-          <fieldset class="feedback__group">
+          <fieldset class="feedback__group feedback__group-textarea">
             <legend class="feedback__legend">Опишите свои эмоции:</legend>
             <label class="visually-hidden">Текстовое поле ввода</label>
-            <textarea class="feedback__input" name="textarea" cols="30" rows="10"
+            <textarea class="feedback__input" name="textarea" cols="23" rows="8"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <button class="feedback__button button" type="button">ОТПРАВИТЬ ОТЗЫВ</button>
-          <small class="feedback__note">* — обязательные поля</small>
+          <span class="feedback__note">* — обязательные поля</span>
         </form>
       </section>
     </main>
