@@ -1,0 +1,33 @@
+@use "../global/var.scss";
+
+.catalog {
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.catalog-intro {
+  padding-bottom: 25px;
+}
+
+.catalog-intro__title {
+  margin-top: 104px;
+}
+
+.catalog__item {
+  padding: 24px 0 25px;
+}
+
+.catalog__figcaption {
+  margin-top: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.catalog__author {
+  color: var.$gray-dark;
+}
+
+.catalog__like--counter {
+  font-weight: 700;
+  text-transform: uppercase;
+}
