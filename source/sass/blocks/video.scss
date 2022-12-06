@@ -1,0 +1,23 @@
+@use "../global/var.scss";
+
+.video {
+  margin: 0 auto;
+  padding-top: 17px;
+  max-width: 280px;
+}
+
+.video__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.video__discription {
+  margin-bottom: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var.$gray-dark;
+}

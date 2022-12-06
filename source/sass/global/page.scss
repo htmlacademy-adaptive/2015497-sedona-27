@@ -1,0 +1,25 @@
+@use "../global/var.scss";
+@use "../global/mixins.scss";
+
+
+.page__body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: var.$small-font-size;
+  line-height: var.$small-font-height;
+}
+
+// Липкий футер
+.page__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 320px;
+  background-color: var.$white;
+}
+
+.page-footer {
+  margin-top: auto;
+}

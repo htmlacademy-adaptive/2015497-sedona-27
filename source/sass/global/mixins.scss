@@ -1,0 +1,20 @@
+@use "./var.scss";
+
+@mixin button {
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$white;
+  background-color: var.$blue;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
