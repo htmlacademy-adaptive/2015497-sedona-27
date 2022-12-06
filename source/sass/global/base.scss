@@ -1,27 +1,3 @@
-@use "./var.scss";
-@use "./mixins.scss";
-
-.page__body {
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: var.$small-font-size;
-  line-height: var.$small-font-height;
-}
-
-.page__container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-  max-width: 320px;
-  background-color: var.$white;
-}
-
-.page-footer {
-  margin-top: auto;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -31,8 +7,4 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.button {
-  @include mixins.button;
 }
