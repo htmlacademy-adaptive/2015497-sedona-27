@@ -3,6 +3,11 @@
 
 .page-footer {
   padding: 28px 18px 23px;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__hashtag {

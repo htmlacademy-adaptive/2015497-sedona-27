@@ -3,10 +3,35 @@
 .catalog {
   margin: 0 auto;
   max-width: 280px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 648px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 1200px;
+  }
+}
+
+.catalog__list {
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__item {
   padding: 24px 0 25px;
+
+  &:first-child {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .catalog__figcaption {

@@ -4,12 +4,25 @@
   padding: 0 20px;
 }
 
+.feedback__form {
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .feedback__group {
   margin-bottom: 34px;
 }
 
 .feedback__group-name {
   margin-bottom: 39px;
+}
+
+.feedback__group-radio,
+.feedback__group-checkbox {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .feedback__legend {
@@ -54,6 +67,8 @@
 }
 
 .feedback__group-textarea {
+  grid-column-start: 1;
+  grid-column-end: -1;
   margin-bottom: 56px;
 }
 
