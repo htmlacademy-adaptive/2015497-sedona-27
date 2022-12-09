@@ -1,10 +1,33 @@
 @use "../global/var.scss";
 
+.advantages__list {
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .advantages__item {
   background-color: var.$gray-light;
 
   &--image {
+    @media (min-width: var.$tablet-width) {
+      display: flex;
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
     background-color: var.$blue;
+  }
+
+  &--image-reverse {
+    @media (min-width: var.$tablet-width) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--icon {
+    padding-left: 47px;
+    background-color: var.$white;
   }
 }
 
@@ -23,6 +46,11 @@
   line-height: var.$big-font-height;
   text-align: center;
   text-transform: uppercase;
+
+  &--icon {
+    margin-bottom: 16px;
+    text-align: left;
+  }
 }
 
 .advantages__number {
@@ -37,26 +65,8 @@
   &--image {
     color: var.$white;
   }
-}
 
-.advantages__sublist {
-  padding: 23px 18px 46px;
-  background-color: var.$white;
-}
-
-.advantages__subitem {
-  padding-left: 47px;
-}
-
-.advantages__subitem:not(:last-child) {
-  margin-bottom: 25px;
-}
-
-.advantages__subtitle {
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.advantages__subdiscription {
-  text-align: left;
+  &--icon {
+    text-align: left;
+  }
 }

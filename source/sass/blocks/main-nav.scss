@@ -1,4 +1,5 @@
 @use "../global/var.scss";
+@use "../global/mixins.scss";
 
 .main-nav {
   display: flex;
@@ -7,20 +8,75 @@
   padding-left: 67px;
 }
 
+.main-nav__toogle {
+  position: relative;
+  margin-top: 17px;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__burger,
+.main-nav__burger::before,
+.main-nav__burger::after {
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+}
+
+.main-nav__burger::before,
+.main-nav__burger::after {
+  display: block;
+  transition: 0.5s;
+  content: "";
+}
+
+.main-nav__burger::before {
+  transform: translateY(-10px);
+}
+
+.main-nav__burger::after {
+  transform: translateY(10px);
+}
+
+.main-nav__burger--close {
+  height: 0;
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__list {
-  display: flex;
+  position: absolute;
+  left: 0;
+  display: none;
   flex-direction: column;
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .main-nav__link {
-  font-weight: 700;
-  font-size: var.$big-font-size;
-  line-height: var.$big-font-height;
-  text-align: center;
-  text-transform: uppercase;
-  color: var.$white;
-  background-color: var.$blue;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  padding: 17px 0 12px;
+
+  @include mixins.button;
 
   &--current {
     box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);

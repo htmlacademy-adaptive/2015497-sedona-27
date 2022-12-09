@@ -18,6 +18,14 @@
   min-height: 100vh;
   max-width: 320px;
   background-color: var.$white;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 1200px;
+  }
 }
 
 .page-footer {
