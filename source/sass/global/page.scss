@@ -16,15 +16,15 @@
   flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
-  min-width: 320px;
+  max-width: 320px;
   background-color: var.$white;
 
   @media (min-width: var.$tablet-width) {
-    min-width: 768px;
+    max-width: 768px;
   }
 
   @media (min-width: var.$desktop-width) {
-    min-width: 1200px;
+    max-width: 1200px;
   }
 }
 
