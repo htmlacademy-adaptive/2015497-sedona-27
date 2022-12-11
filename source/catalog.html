@@ -15,28 +15,30 @@
 
     <!-- Хедер -->
     <header class="main-header">
-      <nav class="main-nav">
-        <a class="main-nav__logo" href="index.html">
-          <img src="./img/logo.svg" alt="Логотип Седоны." width="185" height="96">
-        </a>
+      <a class="main-header__logo" href="#">
+        <img src="./img/logo.svg" alt="Логотип Седоны." width="185" height="96">
+      </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="main-nav__burger"></span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link">Фото и видео</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Форма Отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--inset-shadow" href="https://htmlacademy.ru/">HTML ACADEMY</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--current">
+              <a href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Форма Отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -120,7 +122,8 @@
       <!-- Видео -->
       <section class="video">
         <h2 class="video__title">Все еще сомневаетесь?</h2>
-        <p class="video__discription">Смотрите видеопрезентацию и<br>скорее за билетами, пока они не подорожали в очередной
+        <p class="video__discription">Смотрите видеопрезентацию и<br>скорее за билетами, пока они не подорожали в
+          очередной
           раз!</p>
         <img src="./img/catalog-img/catalog-video-mobile.jpg" alt="Видео." width="280" height="177">
       </section>
