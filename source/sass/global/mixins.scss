@@ -18,3 +18,15 @@
     background-color: #5496bd;
   }
 }
+
+@mixin nav-style {
+  &:hover {
+    color: var.$blue;
+    background-color: var.$white;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: var.$white;
+  }
+}
