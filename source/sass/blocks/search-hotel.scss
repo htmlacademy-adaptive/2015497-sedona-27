@@ -1,12 +1,16 @@
 @use "../global/var.scss";
 @use "../global/mixins.scss";
 
-.search-hotel {
-  padding-bottom: 10px;
-}
-
 .serch-hotel__content {
   padding: 38px 18px 49px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 61px 166px 58px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 61px 382px 66px;
+  }
 }
 
 .search-hotel__title {
@@ -16,6 +20,10 @@
   line-height: var.$big-font-height;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .search-hotel__discription {
@@ -23,6 +31,14 @@
   text-align: center;
   text-transform: uppercase;
   color: var.$gray-dark;
+}
+
+.search-hotel__line-break {
+  &--tab-ds {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 .search-hotel__button {

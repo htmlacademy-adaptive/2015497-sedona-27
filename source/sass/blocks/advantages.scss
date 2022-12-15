@@ -175,12 +175,26 @@
   }
 
   &--desktop {
-    // @media (max-width: 1199px) {
-    //   display: none;
-    // }
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
 
+  &--tab-ds {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &--mob-ds {
+    @media (min-width: var.$tablet-width) and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  &--mob-tab {
     @media (min-width: var.$desktop-width) {
-      display: block;
+      display: none;
     }
   }
 }
