@@ -6,10 +6,30 @@
   align-items: center;
   padding: 52px 20px 28px;
   background: url("../../img/hero-bg.jpg") no-repeat;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 95px 0 117px;
+    background: url("../../img/hero-bg-tab.jpg") no-repeat;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 101px 0 120px;
+    background: url("../../img/hero-bg-ds.jpg") no-repeat;
+  }
 }
 
 .form-intro__hero {
   margin-bottom: 103px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  &--mobile {
+    @media (min-width: var.$tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .form-intro__title {
