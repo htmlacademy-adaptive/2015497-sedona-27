@@ -1,7 +1,19 @@
 @use "../global/var.scss";
 
 .feedback {
-  padding: 0 20px;
+  padding: 24px 20px;
+  border-top: 1px solid #e5e5e5;
+
+  @media (min-width: var.$tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+    border-top: none;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .feedback__form {
@@ -12,11 +24,26 @@
 }
 
 .feedback__group {
-  margin-bottom: 34px;
+  margin: 24px 0 34px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+  }
 }
 
 .feedback__group-name {
-  margin-bottom: 39px;
+  margin: 0 0 39px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+    padding-right: 43px;
+  }
+}
+
+.feedback__group-contact {
+  @media (min-width: var.$tablet-width) {
+    padding-left: 44px;
+  }
 }
 
 .feedback__group-radio,
@@ -53,6 +80,13 @@
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+}
+
+.feedback__list {
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
