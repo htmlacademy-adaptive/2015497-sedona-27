@@ -2,11 +2,19 @@
 @use "../global/mixins.scss";
 
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 28px 18px 23px;
 
   @media (min-width: var.$tablet-width) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    padding: 36px 76px 36px 45px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 36px 136px 36px 104px;
   }
 }
 
@@ -17,9 +25,63 @@
   line-height: var.$big-font-height;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: var.$blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
-.page-footer__logo {
+.page-footer__socilal {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social-link {
+  width: 48px;
+  height: 48px;
+
+  @include mixins.button;
+}
+
+.page-footer__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
   text-align: center;
+
+  .page-footer__logo {
+    margin-left: 12px;
+    fill: var.$black;
+  }
+
+  &:hover {
+    color: var.$blue;
+
+    .page-footer__logo {
+      fill: var.$blue;
+    }
+  }
+
+  &:active {
+    color: #b3b3b3;
+
+    .page-footer__logo {
+      fill: #b3b3b3;
+    }
+  }
 }

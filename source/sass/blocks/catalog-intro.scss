@@ -1,7 +1,51 @@
+@use "../global/var.scss";
+
 .catalog-intro {
-  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 0 25px;
+  background: url("../../img/hero-bg.jpg") no-repeat;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 95px 0 67px;
+    background: url("../../img/hero-bg-tab.jpg") no-repeat;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 101px 0 65px;
+    background: url("../../img/hero-bg-ds.jpg") no-repeat;
+  }
+}
+
+.catalog-intro__hero {
+  margin-bottom: 104px;
+
+  @media (min-width: var.$tablet-width) {
+    width: 457px;
+    height: 78px;
+    margin-bottom: 183px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 220px;
+  }
 }
 
 .catalog-intro__title {
-  margin-top: 104px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.catalog-intro__discription {
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
 }

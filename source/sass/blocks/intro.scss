@@ -2,11 +2,31 @@
 
 .intro {
   padding: 90px 19px 32px 19px;
-  background: url("../../img/hero.jpg") no-repeat;
+  background: url("../../img/index-img/hero-bg-mobile.jpg") no-repeat;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 77px 154px 55px;
+    background: url("../../img/index-img/hero-bg-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 78px 370px 44px;
+    background: url("../../img/index-img/hero-bg-desktop.jpg") no-repeat;
+  }
 }
 
 .intro__hero {
   margin-bottom: 117px;
+
+  @media (min-width: var.$tablet-width) {
+    width: 461px;
+    height: 350px;
+    margin-bottom: 148px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 159px;
+  }
 }
 
 .intro__text {
@@ -16,6 +36,10 @@
   line-height: var.$big-font-height;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: 484px;
+  }
 }
 
 .intro__reasons {
@@ -24,4 +48,9 @@
   color: var.$gray-dark;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: 484px;
+  }
 }
+

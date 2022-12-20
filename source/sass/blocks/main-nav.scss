@@ -2,15 +2,15 @@
 @use "../global/mixins.scss";
 
 .main-nav {
-  display: flex;
-  gap: 25px;
-  max-height: 56px;
-  padding-left: 67px;
+  min-height: 56px;
 }
 
-.main-nav__toogle {
-  position: relative;
-  margin-top: 17px;
+// Общие стили кнопки
+.main-nav__toggle {
+  position: absolute;
+  z-index: 3;
+  top: 17px;
+  right: 19px;
   width: 23px;
   height: 22px;
   background-color: transparent;
@@ -22,35 +22,55 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
 }
 
-.main-nav__burger,
-.main-nav__burger::before,
-.main-nav__burger::after {
+
+// Кнопка закрытого меню
+.main-nav--closed .main-nav__burger {
+  display: block;
   position: absolute;
   left: 0;
   width: 23px;
   height: 4px;
   background-color: #81b3d2;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: #81b3d2;
+  }
+
+  &::before {
+    transform: translateY(10px);
+  }
+
+  &::after {
+    transform: translateY(-10px);
+  }
 }
 
-.main-nav__burger::before,
-.main-nav__burger::after {
-  display: block;
-  transition: 0.5s;
-  content: "";
-}
-
-.main-nav__burger::before {
-  transform: translateY(-10px);
-}
-
-.main-nav__burger::after {
-  transform: translateY(10px);
-}
-
-.main-nav__burger--close {
-  height: 0;
+// Кнопка открытого меню
+.main-nav--opened .main-nav__burger {
+  &::before,
+  &::after {
+    z-index: 3;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: var.$white;
+  }
 
   &::before {
     transform: rotate(45deg);
@@ -61,28 +81,124 @@
   }
 }
 
-.main-nav__list {
+// Меню
+.site-list {
   position: absolute;
-  left: 0;
-  display: none;
-  flex-direction: column;
   width: 100%;
 
   @media (min-width: var.$tablet-width) {
-    flex-direction: row;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.main-nav__link {
+.site-list a {
+  position: relative;
+  z-index: 2;
   padding: 17px 0 12px;
+  border-bottom: 1px solid #678fa8;
 
   @include mixins.button;
 
-  &--current {
-    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  @media (min-width: var.$tablet-width) {
+    width: 153px;
+    padding: 18px 0 17px;
+    font: inherit;
+    font-weight: 700;
+    border: none;
+    color: var.$black;
+    background-color: var.$white;
+    box-shadow: none;
+
+    @include mixins.nav-style;
   }
 
-  &--inset-shadow {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  @media (min-width: var.$desktop-width) {
+    width: 240px;
   }
+}
+
+.site-list__item:nth-child(2n) {
+  @media (min-width: var.$tablet-width) {
+    margin-right: 153px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-right: 240px;
+  }
+}
+
+.site-list__item:last-child {
+  @media (min-width: var.$tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.site-list__item:first-child a {
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  @media (min-width: var.$tablet-width) {
+    box-shadow: none;
+  }
+}
+
+.site-list__item:last-child a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  @media (min-width: var.$tablet-width) {
+    box-shadow: none;
+  }
+}
+
+.site-list__item:last-child a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  content: "";
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--current {
+      cursor: default;
+    }
+  }
+}
+
+.site-list__item--current a {
+  &:hover {
+    background-color: var.$blue;
+
+    @media (min-width: var.$tablet-width) {
+      background-color: var.$white;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    color: #766357;
+  }
+}
+
+// No JS
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
 }
