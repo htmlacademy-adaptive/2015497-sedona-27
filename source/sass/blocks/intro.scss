@@ -15,21 +15,12 @@
   }
 }
 
-.intro__hero-mobile {
+.intro__hero {
   margin-bottom: 117px;
 
   @media (min-width: var.$tablet-width) {
-    display: none;
-  }
-}
-
-.intro__hero {
-  @media (max-width: var.$tablet-width) {
-    display: none;
-    margin-bottom: 148px;
-  }
-
-  @media (min-width: var.$tablet-width) {
+    width: 461px;
+    height: 350px;
     margin-bottom: 148px;
   }
 
@@ -63,8 +54,3 @@
   }
 }
 
-.intro__line-break--mobile {
-  @media (min-width: var.$tablet-width) {
-    display: none;
-  }
-}
