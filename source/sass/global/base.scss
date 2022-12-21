@@ -19,7 +19,7 @@
   }
 
   &--tablet {
-    @media (max-width: 767px) and (min-width: var.$desktop-width) {
+    @media (max-width: 767px), (min-width: var.$desktop-width) {
       display: none;
     }
   }

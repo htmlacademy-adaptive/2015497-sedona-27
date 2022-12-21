@@ -6,6 +6,7 @@
 
 .main-header__logo {
   position: absolute;
+  z-index: 1;
   left: calc(50% - (185px / 2));
 
   @media (min-width: var.$tablet-width) {
