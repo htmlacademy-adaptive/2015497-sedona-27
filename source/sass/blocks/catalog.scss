@@ -34,6 +34,11 @@
   }
 }
 
+.catalog__photo {
+  width: 100%;
+  height: auto;
+}
+
 .catalog__title {
   margin-top: 15px;
   font-weight: 700;
@@ -44,7 +49,23 @@
   color: var.$gray-dark;
 }
 
-.catalog__like--counter {
-  font-weight: 700;
-  text-transform: uppercase;
+.catalog__like-button {
+  background-color: transparent;
+}
+
+.catalog__like-icon {
+  fill: var.$black;
+  opacity: 0.3;
+
+  @media (min-width: var.$desktop-width) {
+    fill: var.$white;
+    opacity: 1;
+  }
+}
+
+.catalog__like {
+  &--counter {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }

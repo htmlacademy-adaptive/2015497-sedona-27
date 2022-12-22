@@ -6,27 +6,27 @@
   flex-direction: column;
   align-items: center;
   padding: 52px 0 25px;
-  background: url("../../img/hero-bg.jpg") no-repeat;
+  background: url("../../img/hero-bg.jpg") no-repeat 0 -56px;
 
   @media (min-resolution: var.$retina) {
-    background: url("../../img/hero-bg@2x.jpg") no-repeat top /100% 158px;
+    background: url("../../img/hero-bg@2x.jpg") no-repeat top 0 /100% 158px;
   }
 
   @media (min-width: var.$tablet-width) {
     padding: 95px 0 67px;
-    background: url("../../img/hero-bg-tab.jpg") no-repeat;
+    background: url("../../img/hero-bg-tab.jpg") no-repeat 0 -56px;
 
     @media (min-resolution: var.$retina) {
-      background: url("../../img/hero-bg-tab@2x.jpg") no-repeat top /100% 290px;
+      background: url("../../img/hero-bg-tab@2x.jpg") no-repeat top 0 /100% 290px;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     padding: 101px 0 65px;
-    background: url("../../img/hero-bg-ds.jpg") no-repeat;
+    background: url("../../img/hero-bg-ds.jpg") no-repeat 0 -56px;
 
     @media (min-resolution: var.$retina) {
-      background: url("../../img/hero-bg-ds@2x.jpg") no-repeat top /100% 301px;
+      background: url("../../img/hero-bg-ds@2x.jpg") no-repeat top 0 /100% 301px;
     }
   }
 
