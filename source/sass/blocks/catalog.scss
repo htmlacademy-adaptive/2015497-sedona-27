@@ -26,11 +26,30 @@
 }
 
 .catalog__item {
+  position: relative;
   padding: 24px 0 25px;
 
   &:first-child {
     grid-column-start: 1;
     grid-column-end: -1;
+  }
+
+  &::after {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: "";
+
+    @media (min-width: var.$tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
   }
 }
 
@@ -39,33 +58,81 @@
   height: auto;
 }
 
+.catalog__sign-wrapper {
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: var.$gray-input;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-top: -80px;
+    color: var.$white;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &--bottom {
+      padding: 17px 20px 17px 25px;
+    }
+  }
+}
+
+.catalog__sign {
+  margin-bottom: 11px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
 .catalog__title {
   margin-top: 15px;
   font-weight: 700;
+  font-size: var.$small-font-size;
   text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .catalog__author {
   color: var.$gray-dark;
+
+  @media (min-width: var.$desktop-width) {
+    color: var.$white;
+  }
 }
 
 .catalog__like-button {
+  margin-right: 11px;
   background-color: transparent;
+
+  &:hover .catalog__like-icon {
+    opacity: 0.6;
+  }
+
+  &:active .catalog__like-icon {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin-right: 4px;
+  }
 }
 
 .catalog__like-icon {
-  fill: var.$black;
-  opacity: 0.3;
+  fill: rgba(0, 0, 0, 0.3);
 
   @media (min-width: var.$desktop-width) {
     fill: var.$white;
-    opacity: 1;
   }
 }
 
 .catalog__like {
   &--counter {
     font-weight: 700;
+    vertical-align: text-bottom;
     text-transform: uppercase;
   }
 }
