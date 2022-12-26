@@ -1,0 +1,110 @@
+@use "../global/var.scss";
+@use "../global/mixins.scss";
+
+.modal {
+  position: fixed;
+  display: flex;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+  width: 320px;
+  margin: auto;
+  padding: 45px 42px 35px;
+  background-color: var.$white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: var.$tablet-width) {
+    width: 400px;
+    padding: 50px 47px 49px 46px;
+  }
+
+  &--valid {
+    padding: 0;
+
+    @media (min-width: var.$tablet-width) {
+      width: 640px;
+    }
+  }
+}
+
+.modal__content {
+  padding: 39px 39px 30px 37px;
+  background-color: var.$white;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 53px 99px 30px 97px;
+  }
+}
+
+.modal__title {
+  margin-bottom: 38px;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
+
+  &--invalid {
+    @media (min-width: var.$tablet-width) {
+      line-height: 40px;
+    }
+  }
+}
+
+.modal__discription {
+  margin-bottom: 28px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--valid {
+    margin-bottom: 30px;
+  }
+}
+
+.modal__button-wrapper {
+  padding: 20px;
+  background-color: var.$gray-input;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 44px 91px;
+  }
+}
+
+.modal__button {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  padding: 18px 64px 14px;
+
+  @include mixins.button;
+
+  &--invalid {
+    @media (min-width: var.$tablet-width) {
+      width: 272px;
+    }
+  }
+
+  &--valid {
+    width: 280px;
+    padding: 18px 62px 14px 60px;
+
+    @media (min-width: var.$tablet-width) {
+      width: 458px;
+      font-size: 21px;
+    }
+  }
+}
