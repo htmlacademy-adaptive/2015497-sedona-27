@@ -80,15 +80,23 @@
           <fieldset class="feedback__group feedback__group-contact">
             <legend class="feedback__legend">Контактная информация:</legend>
             <label class="feedback__label" for="feedback-phone">Контактный телефон*:</label>
-            <input class="feedback__input" type="tel" id="feedback-phone" placeholder="Введите телефон">
-            <svg class="feedback__input-phone" width="18" height="18">
-              <use href="img/sprite.svg#phone"></use>
-            </svg>
+            <div class="feedback__input-wrapper">
+              <input class="feedback__input" type="tel" id="feedback-phone" placeholder="Введите телефон">
+              <div class="feedback__icon-wrapper">
+                <svg class="feedback__input-phone" width="18" height="18">
+                  <use href="img/sprite.svg#phone"></use>
+                </svg>
+              </div>
+            </div>
             <label class="feedback__label" for="feedback-email">Электронная почта*:</label>
-            <input class="feedback__input" type="email" id="feedback-email" placeholder="Введите e-mail">
-            <svg class="feedback__input-mail" width="16" height="12">
-              <use href="img/sprite.svg#mail"></use>
-            </svg>
+            <div class="feedback__input-wrapper">
+              <input class="feedback__input" type="email" id="feedback-email" placeholder="Введите e-mail">
+              <div class="feedback__icon-wrapper">
+                <svg class="feedback__input-mail" width="16" height="12">
+                  <use href="img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+            </div>
           </fieldset>
 
           <!-- Радиокнопки -->
@@ -104,7 +112,7 @@
               </li>
               <li class="feedback__item">
                 <label class="feedback__control">
-                  <input class="visually-hidden feedback__control-input" type="radio" name="bad" value="bad">
+                  <input class="visually-hidden feedback__control-input" type="radio" name="bad" value="b">
                   <span class="feedback__control-mark feedback__control-mark-radio"></span>
                   <span class="feedback__control-label">Скорее отрицательное</span>
                 </label>
@@ -159,7 +167,7 @@
           <fieldset class="feedback__group feedback__group-textarea">
             <legend class="feedback__legend">Опишите свои эмоции:</legend>
             <label class="visually-hidden">Текстовое поле ввода</label>
-            <textarea class="feedback__input" name="textarea" cols="23" rows="8"
+            <textarea class="feedback__input feedback__input-textarea" name="textarea"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
@@ -223,7 +231,8 @@
       <div class="modal__content">
         <h2 class="modal__title modal__title--valid">Ваш отзыв отправлен!</h2>
         <p class="modal__discription modal__discription--valid">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
-          <br class="line-break--mob-tab">В ближайшее время мы опубликуем его на сайте.</p>
+          <br class="line-break--mob-tab">В ближайшее время мы опубликуем его на сайте.
+        </p>
       </div>
       <div class="modal__button-wrapper">
         <button class="modal__button modal__button--valid" type="button">ЗАКРЫТЬ ОКНО</button>
