@@ -1,6 +1,7 @@
 @use "../global/var.scss";
 
 .video {
+  position: relative;
   margin: 0 auto;
   padding-top: 17px;
   max-width: 280px;
@@ -29,4 +30,22 @@
   text-transform: uppercase;
   text-align: center;
   color: var.$gray-dark;
+}
+
+.video__button {
+  position: absolute;
+  top: 227px;
+  left: 113px;
+  background-color: transparent;
+
+  @media (min-width: var.$tablet-width) {
+    top: 400px;
+    left: 358px;
+  }
+}
+
+.video__poster {
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
 }
