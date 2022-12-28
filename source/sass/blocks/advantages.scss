@@ -74,6 +74,8 @@
   }
 
   &--icon {
+    position: relative;
+
     @media (max-width: 767px) {
       min-height: 142px;
       padding-left: 47px;
@@ -82,6 +84,89 @@
     @media (min-width: var.$tablet-width) {
       min-height: 114px;
       padding-left: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+    }
+  }
+
+  &--house {
+    &::before {
+      left: 0;
+      top: 12px;
+      width: 39px;
+      height: 37px;
+      background: url("../../img/index-img/icon/house-icon-mobile.svg") no-repeat;
+
+      @media (min-width: var.$tablet-width) {
+        top: -90px;
+        left: 87px;
+        width: 77px;
+        height: 72px;
+        background: url("../../img/index-img/icon/house-icon-tablet.svg") no-repeat;
+      }
+
+      @media (min-width: var.$desktop-width) {
+        top: -90px;
+        left: 159px;
+        width: 80px;
+        height: 73px;
+        background: url("../../img/index-img/icon/house-icon-desktop.svg") no-repeat;
+      }
+    }
+  }
+
+  &--food {
+    &::before {
+      left: 0;
+      top: 22px;
+      width: 40px;
+      height: 35px;
+      background: url("../../img/index-img/icon/burger-icon-mobile.svg") no-repeat;
+
+      @media (min-width: var.$tablet-width) {
+        top: -90px;
+        left: 87px;
+        width: 76px;
+        height: 69px;
+        background: url("../../img/index-img/icon/burger-icon-tablet.svg") no-repeat;
+      }
+
+      @media (min-width: var.$desktop-width) {
+        top: -90px;
+        left: 159px;
+        width: 76px;
+        height: 69px;
+        background: url("../../img/index-img/icon/burger-icon-desktop.svg") no-repeat;
+      }
+    }
+  }
+
+  &--souvenirs {
+    &::before {
+      left: 0;
+      top: 22px;
+      width: 32px;
+      height: 38px;
+      background: url("../../img/index-img/icon/gift-icon-mobile.svg") no-repeat;
+
+      @media (min-width: var.$tablet-width) {
+        top: -90px;
+        left: 87px;
+        width: 67px;
+        height: 75px;
+        background: url("../../img/index-img/icon/gift-icon-tablet.svg") no-repeat;
+      }
+
+      @media (min-width: var.$desktop-width) {
+        top: -90px;
+        left: 159px;
+        width: 78px;
+        height: 76px;
+        background: url("../../img/index-img/icon/gift-icon-desktop.svg") no-repeat;
+      }
     }
   }
 
@@ -142,21 +227,6 @@
 }
 
 .advantages__photo {
-  &--mobile {
-    @media (min-width: var.$tablet-width) {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    @media (max-width: 767px), (min-width: var.$desktop-width) {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    @media (max-width: 1199px) {
-      display: none;
-    }
-  }
+  width: 100%;
+  height: auto;
 }

@@ -1,8 +1,8 @@
 @use "../global/var.scss";
+@use "../global/mixins.scss";
 
 .feedback {
   padding: 24px 20px;
-  border-top: 1px solid #e5e5e5;
 
   @media (min-width: var.$tablet-width) {
     padding-left: 60px;
@@ -24,7 +24,18 @@
 }
 
 .feedback__group {
+  position: relative;
   margin: 24px 0 34px;
+
+  &::before {
+    position: absolute;
+    left: -20px;
+    top: -70px;
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: "";
+  }
 
   @media (min-width: var.$tablet-width) {
     margin: 0;
@@ -32,24 +43,55 @@
 }
 
 .feedback__group-name {
-  margin: 0 0 39px;
+  margin: 0 0 64px;
 
   @media (min-width: var.$tablet-width) {
     margin: 0;
     padding-right: 43px;
   }
+
+  .feedback__input {
+    width: 100%;
+  }
 }
 
 .feedback__group-contact {
+  margin: 0 0 59px;
+
   @media (min-width: var.$tablet-width) {
     padding-left: 44px;
   }
+
+  .feedback__input {
+    max-width: 222px;
+  }
+}
+
+.feedback__input-wrapper {
+  display: flex;
+}
+
+.feedback__icon-wrapper {
+  max-height: 58px;
+  padding: 20px;
+  background-color: #e6e6e6;
 }
 
 .feedback__group-radio,
 .feedback__group-checkbox {
   grid-column-start: 1;
   grid-column-end: -1;
+  margin: 0 0 59px;
+
+  .feedback__legend {
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__group-checkbox {
+  &::before {
+    top: -94px;
+  }
 }
 
 .feedback__legend {
@@ -73,6 +115,7 @@
   font-size: var.$big-font-size;
   line-height: var.$big-font-height;
   background-color: var.$gray-input;
+  cursor: pointer;
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
@@ -80,6 +123,16 @@
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: var.$white;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
   }
 }
 
@@ -91,7 +144,65 @@
 }
 
 .feedback__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
+}
+
+.feedback__control {
+  position: relative;
+  display: block;
+  margin-left: 62px;
+  cursor: pointer;
+}
+
+.feedback__control-mark {
+  position: absolute;
+  top: -12px;
+  left: -60px;
+  width: 46px;
+  height: 46px;
+  background-color: var.$gray-input;
+  cursor: pointer;
+}
+
+.feedback__control-mark-radio {
+  border-radius: 50%;
+}
+
+.feedback__control-mark-checkbox {
+  border-radius: 4px;
+}
+
+input[type="radio"]:checked + .feedback__control-mark-radio::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: var.$gray-dark;
+  border-radius: 50%;
+  content: "";
+}
+
+input[type="checkbox"]:checked + .feedback__control-mark-checkbox::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../../img/form-img/icon/form-tick-icon.svg");
+  content: "";
+}
+
+.feedback__control-input:hover + .feedback__control-mark {
+  background-color: #e5e5e5;
+}
+
+.feedback__control-input:active + .feedback__control-mark {
+  background-color: #d5d5d5;
+
+  &::before {
+    opacity: 0.3;
+  }
 }
 
 .feedback__control-label {
@@ -103,7 +214,12 @@
 .feedback__group-textarea {
   grid-column-start: 1;
   grid-column-end: -1;
-  margin-bottom: 56px;
+  margin: 0 0 56px;
+}
+
+.feedback__input-textarea {
+  width: 100%;
+  height: 150px;
 }
 
 .feedback__button {
