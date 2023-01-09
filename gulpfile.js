@@ -10,7 +10,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
-import {deleteAsync} from 'del';
+import { deleteAsync } from 'del';
 import terser from 'gulp-terser';
 
 // Styles
