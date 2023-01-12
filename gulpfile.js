@@ -47,20 +47,20 @@ export const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/*.{jpeg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/*.{jpeg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'));
 }
 
 // Webp
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{webp}')
+  return gulp.src('source/img/**/*{jpg,png,webp}')
     .pipe(squoosh({
       webp: {}
     }))
@@ -70,9 +70,20 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src('source/img/*.svg')
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg', '!source/img/sprite.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
+
+  const sprite = () => {
+    return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+    inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+    }
+
 
 // Copy
 
@@ -135,6 +146,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
   ),
 );
@@ -148,6 +160,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
   ),
   gulp.series(
