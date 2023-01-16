@@ -1,5 +1,21 @@
 @use "../global/var.scss";
 
+.advantages {
+  position: relative;
+
+  @media (max-width: 767px) {
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -22px;
+      width: 100%;
+      height: 37px;
+      background: url("../../img/index-img/icon/divider-mobile-down.svg") no-repeat;
+      content: "";
+    }
+  }
+}
+
 .advantages__list {
   @media (min-width: var.$tablet-width) {
     display: grid;
@@ -8,6 +24,7 @@
 }
 
 .advantages__item {
+  position: relative;
   background-color: var.$gray-light;
 
   @media (min-width: var.$tablet-width) {
@@ -46,6 +63,25 @@
       padding: 169px 0 69px;
     }
   }
+
+  &--souvenirs {
+    @media (max-width: 767px) {
+      margin: -25px 0 17px;
+    }
+  }
+
+  &--bottom {
+    @media (max-width: 767px) {
+      &::before {
+        position: absolute;
+        left: 18px;
+        width: 284px;
+        height: 1px;
+        background-color: #d6d6d6;
+        content: "";
+      }
+    }
+  }
 }
 
 .advantages__content {
@@ -73,12 +109,22 @@
     color: var.$white;
   }
 
+  &--city {
+    @media (max-width: 767px) {
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 10px;
+    }
+  }
+
   &--icon {
     position: relative;
 
     @media (max-width: 767px) {
       min-height: 142px;
-      padding-left: 47px;
+      padding-left: 65px;
     }
 
     @media (min-width: var.$tablet-width) {
@@ -94,8 +140,8 @@
 
   &--house {
     &::before {
-      left: 0;
-      top: 12px;
+      left: 18px;
+      top: 24px;
       width: 39px;
       height: 37px;
       background: url("../../img/index-img/icon/house-icon-mobile.svg") no-repeat;
@@ -120,7 +166,7 @@
 
   &--food {
     &::before {
-      left: 0;
+      left: 18px;
       top: 22px;
       width: 40px;
       height: 35px;
@@ -146,8 +192,8 @@
 
   &--souvenirs {
     &::before {
-      left: 0;
-      top: 22px;
+      left: 23px;
+      top: 20px;
       width: 32px;
       height: 38px;
       background: url("../../img/index-img/icon/gift-icon-mobile.svg") no-repeat;
@@ -172,7 +218,7 @@
 
   &--bottom {
     @media (max-width: 767px) {
-      min-height: 165px;
+      min-height: 167px;
     }
   }
 }
@@ -187,6 +233,17 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 20px;
+    font-size: 21px;
+  }
+
+  &--image {
+    @media (max-width: 767px) {
+      margin-top: 23px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      margin-bottom: 10px;
+    }
   }
 
   &--icon {
@@ -196,6 +253,12 @@
     @media (min-width: var.$tablet-width) {
       margin-bottom: 34px;
       text-align: center;
+    }
+  }
+
+  &--house {
+    @media (max-width: 767px) {
+      margin-top: 26px;
     }
   }
 }

@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 18px 23px;
+  padding: 40px 18px 23px;
 
   @media (min-width: var.$tablet-width) {
     flex-direction: row;
@@ -21,7 +21,7 @@
 .page-footer__hashtag {
   margin-bottom: 33px;
   font-weight: 700;
-  font-size: var.$big-font-size;
+  font-size: 21px;
   line-height: var.$big-font-height;
   text-transform: uppercase;
   text-align: center;
