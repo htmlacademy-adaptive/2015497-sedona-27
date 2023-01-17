@@ -6,6 +6,7 @@
   @media (max-width: 767px) {
     &::before {
       position: absolute;
+      z-index: 1;
       left: 0;
       top: -22px;
       width: 100%;
@@ -289,6 +290,12 @@
   &--bottom {
     @media (min-width: var.$tablet-width) {
       margin-bottom: 14px;
+    }
+  }
+
+  &--bridge {
+    @media (max-width: 767px) {
+      margin-top: 0;
     }
   }
 }

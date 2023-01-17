@@ -75,11 +75,7 @@
 }
 
 .feedback__group-contact {
-  margin: 0 0 59px;
-
-  .feedback__legend {
-    margin-left: 7px;
-  }
+  margin: 0 0 45px;
 
   @media (min-width: var.$tablet-width) {
     padding-left: 0;
@@ -291,10 +287,6 @@
       padding: 10px 0;
     }
   }
-
-  &::before {
-    top: -94px;
-  }
 }
 
 .feedback__item:not(:last-child) {
@@ -333,7 +325,7 @@
 input[type="radio"]:checked + .feedback__control-mark-radio::before {
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 13px;
   width: 16px;
   height: 16px;
   background-color: var.$gray-dark;
@@ -344,7 +336,7 @@ input[type="radio"]:checked + .feedback__control-mark-radio::before {
 input[type="checkbox"]:checked + .feedback__control-mark-checkbox::before {
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 11px;
   width: 22px;
   height: 16px;
   background-image: url("../../img/form-img/icon/form-tick-icon.svg");

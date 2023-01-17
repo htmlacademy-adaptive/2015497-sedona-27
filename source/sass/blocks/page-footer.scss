@@ -16,6 +16,22 @@
   @media (min-width: var.$desktop-width) {
     padding: 38px 136px 36px 118px;
   }
+
+  &--catalog {
+    @media (max-width: 767px) {
+      padding-top: 32px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 77px;
+      padding-right: 61px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      padding-top: 119px;
+      padding-right: 119px;
+    }
+  }
 }
 
 .page-footer__hashtag {
@@ -48,6 +64,12 @@
   @media (min-width: var.$tablet-width) {
     margin-bottom: 0;
     padding-left: 8px;
+  }
+
+  &--catalog {
+    @media (min-width: var.$tablet-width) {
+      padding-right: 18px;
+    }
   }
 }
 
