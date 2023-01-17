@@ -68,6 +68,10 @@
     @media (max-width: 767px) {
       margin: -25px 0 17px;
     }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 154px;
+    }
   }
 
   &--bottom {
@@ -91,6 +95,7 @@
   min-height: 191px;
 
   @media (min-width: var.$tablet-width) {
+    justify-content: stretch;
     min-height: 256px;
   }
 
@@ -101,6 +106,7 @@
 
     @media (min-width: var.$tablet-width) {
       width: 256px;
+      padding-top: 53px;
     }
 
     @media (min-width: var.$desktop-width) {
@@ -113,10 +119,6 @@
     @media (max-width: 767px) {
       margin-bottom: 14px;
     }
-
-    @media (min-width: var.$tablet-width) {
-      padding-top: 10px;
-    }
   }
 
   &--icon {
@@ -128,7 +130,7 @@
     }
 
     @media (min-width: var.$tablet-width) {
-      min-height: 114px;
+      min-height: 112px;
       padding-left: 0;
     }
 
@@ -147,7 +149,7 @@
       background: url("../../img/index-img/icon/house-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
+        top: -99px;
         left: 87px;
         width: 77px;
         height: 72px;
@@ -173,7 +175,7 @@
       background: url("../../img/index-img/icon/burger-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
+        top: -97px;
         left: 87px;
         width: 76px;
         height: 69px;
@@ -199,8 +201,8 @@
       background: url("../../img/index-img/icon/gift-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
-        left: 87px;
+        top: -91px;
+        left: 96px;
         width: 67px;
         height: 75px;
         background: url("../../img/index-img/icon/gift-icon-tablet.svg") no-repeat;
@@ -219,6 +221,16 @@
   &--bottom {
     @media (max-width: 767px) {
       min-height: 167px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 52px;
+    }
+  }
+
+  &--road {
+    @media (min-width: var.$tablet-width) {
+      padding-top: 43px;
     }
   }
 }
@@ -242,7 +254,7 @@
     }
 
     @media (min-width: var.$tablet-width) {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
     }
   }
 
@@ -251,7 +263,7 @@
     text-align: left;
 
     @media (min-width: var.$tablet-width) {
-      margin-bottom: 34px;
+      margin-bottom: 22px;
       text-align: center;
     }
   }
@@ -261,13 +273,19 @@
       margin-top: 26px;
     }
   }
+
+  &--bottom {
+    @media (min-width: var.$tablet-width) {
+      margin-bottom: 14px;
+    }
+  }
 }
 
 .advantages__number {
   margin-bottom: 17px;
 
   @media (min-width: var.$tablet-width) {
-    margin-bottom: 34px;
+    margin-bottom: 23px;
   }
 }
 
