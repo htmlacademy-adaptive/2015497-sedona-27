@@ -27,11 +27,25 @@
 
 .catalog__item {
   position: relative;
-  padding: 24px 0 25px;
+  padding: 24px 0 26px;
 
   &:first-child {
     grid-column-start: 1;
     grid-column-end: -1;
+
+    &::before {
+      position: absolute;
+      left: -20px;
+      top: 0;
+      width: 320px;
+      height: 1px;
+      background-color: #e5e5e5;
+      content: "";
+
+      @media (min-width: var.$tablet-width) {
+        display: none;
+      }
+    }
   }
 
   &::after {
@@ -62,6 +76,7 @@
   @media (min-width: var.$tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 22px 20px 15px;
     background-color: var.$gray-input;
   }
@@ -70,9 +85,12 @@
     margin-top: -80px;
     color: var.$white;
     background-color: rgba(0, 0, 0, 0.3);
+  }
 
-    &--bottom {
-      padding: 17px 20px 17px 25px;
+  &--bottom {
+    @media (min-width: var.$desktop-width) {
+      padding-top: 21px;
+      padding-left: 26px;
     }
   }
 }

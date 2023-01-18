@@ -1,5 +1,22 @@
 @use "../global/var.scss";
 
+.advantages {
+  position: relative;
+
+  @media (max-width: 767px) {
+    &::before {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: -22px;
+      width: 100%;
+      height: 37px;
+      background: url("../../img/index-img/icon/divider-mobile-down.svg") no-repeat;
+      content: "";
+    }
+  }
+}
+
 .advantages__list {
   @media (min-width: var.$tablet-width) {
     display: grid;
@@ -8,6 +25,7 @@
 }
 
 .advantages__item {
+  position: relative;
   background-color: var.$gray-light;
 
   @media (min-width: var.$tablet-width) {
@@ -43,7 +61,34 @@
     }
 
     @media (min-width: var.$desktop-width) {
-      padding: 169px 0 69px;
+      padding: 169px 0 48px;
+    }
+  }
+
+  &--souvenirs {
+    @media (max-width: 767px) {
+      margin: -25px 0 17px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 154px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      padding-top: 172px;
+    }
+  }
+
+  &--bottom {
+    @media (max-width: 767px) {
+      &::before {
+        position: absolute;
+        left: 18px;
+        width: 284px;
+        height: 1px;
+        background-color: #d6d6d6;
+        content: "";
+      }
     }
   }
 }
@@ -55,6 +100,7 @@
   min-height: 191px;
 
   @media (min-width: var.$tablet-width) {
+    justify-content: stretch;
     min-height: 256px;
   }
 
@@ -65,6 +111,7 @@
 
     @media (min-width: var.$tablet-width) {
       width: 256px;
+      padding-top: 53px;
     }
 
     @media (min-width: var.$desktop-width) {
@@ -73,16 +120,22 @@
     color: var.$white;
   }
 
+  &--city {
+    @media (max-width: 767px) {
+      margin-bottom: 14px;
+    }
+  }
+
   &--icon {
     position: relative;
 
     @media (max-width: 767px) {
       min-height: 142px;
-      padding-left: 47px;
+      padding-left: 65px;
     }
 
     @media (min-width: var.$tablet-width) {
-      min-height: 114px;
+      min-height: 112px;
       padding-left: 0;
     }
 
@@ -94,14 +147,14 @@
 
   &--house {
     &::before {
-      left: 0;
-      top: 12px;
+      left: 18px;
+      top: 24px;
       width: 39px;
       height: 37px;
       background: url("../../img/index-img/icon/house-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
+        top: -99px;
         left: 87px;
         width: 77px;
         height: 72px;
@@ -109,7 +162,7 @@
       }
 
       @media (min-width: var.$desktop-width) {
-        top: -90px;
+        top: -100px;
         left: 159px;
         width: 80px;
         height: 73px;
@@ -120,14 +173,14 @@
 
   &--food {
     &::before {
-      left: 0;
+      left: 18px;
       top: 22px;
       width: 40px;
       height: 35px;
       background: url("../../img/index-img/icon/burger-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
+        top: -97px;
         left: 87px;
         width: 76px;
         height: 69px;
@@ -135,7 +188,7 @@
       }
 
       @media (min-width: var.$desktop-width) {
-        top: -90px;
+        top: -98px;
         left: 159px;
         width: 76px;
         height: 69px;
@@ -146,22 +199,22 @@
 
   &--souvenirs {
     &::before {
-      left: 0;
-      top: 22px;
+      left: 23px;
+      top: 20px;
       width: 32px;
       height: 38px;
       background: url("../../img/index-img/icon/gift-icon-mobile.svg") no-repeat;
 
       @media (min-width: var.$tablet-width) {
-        top: -90px;
-        left: 87px;
+        top: -91px;
+        left: 96px;
         width: 67px;
         height: 75px;
         background: url("../../img/index-img/icon/gift-icon-tablet.svg") no-repeat;
       }
 
       @media (min-width: var.$desktop-width) {
-        top: -90px;
+        top: -104px;
         left: 159px;
         width: 78px;
         height: 76px;
@@ -172,7 +225,25 @@
 
   &--bottom {
     @media (max-width: 767px) {
-      min-height: 165px;
+      min-height: 167px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      padding-top: 52px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      padding-top: 65px;
+    }
+  }
+
+  &--road {
+    @media (min-width: var.$tablet-width) {
+      padding-top: 43px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      padding-top: 53px;
     }
   }
 }
@@ -187,6 +258,17 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 20px;
+    font-size: 21px;
+  }
+
+  &--image {
+    @media (max-width: 767px) {
+      margin-top: 23px;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      margin-bottom: 13px;
+    }
   }
 
   &--icon {
@@ -194,8 +276,26 @@
     text-align: left;
 
     @media (min-width: var.$tablet-width) {
-      margin-bottom: 34px;
+      margin-bottom: 22px;
       text-align: center;
+    }
+  }
+
+  &--house {
+    @media (max-width: 767px) {
+      margin-top: 26px;
+    }
+  }
+
+  &--bottom {
+    @media (min-width: var.$tablet-width) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &--bridge {
+    @media (max-width: 767px) {
+      margin-top: 0;
     }
   }
 }
@@ -204,7 +304,7 @@
   margin-bottom: 17px;
 
   @media (min-width: var.$tablet-width) {
-    margin-bottom: 34px;
+    margin-bottom: 23px;
   }
 }
 

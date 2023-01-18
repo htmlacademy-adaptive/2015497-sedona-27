@@ -2,26 +2,27 @@
 @use "../global/mixins.scss";
 
 .serch-hotel__content {
-  padding: 38px 18px 49px;
+  padding: 40px 18px 49px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 61px 166px 58px;
+    padding: 61px 155px 58px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 61px 382px 66px;
+    padding: 61px 371px 66px;
   }
 }
 
 .search-hotel__title {
-  margin-bottom: 40px;
+  margin-bottom: 21px;
   font-weight: 700;
-  font-size: var.$big-font-size;
+  font-size: 21px;
   line-height: var.$big-font-height;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: var.$tablet-width) {
+    margin-bottom: 33px;
     font-size: 30px;
   }
 }
@@ -31,6 +32,14 @@
   text-align: center;
   text-transform: uppercase;
   color: var.$gray-dark;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .search-hotel__button {
@@ -38,4 +47,5 @@
   padding: 16px 49px;
 
   @include mixins.button;
+  font-size: 21px;
 }
