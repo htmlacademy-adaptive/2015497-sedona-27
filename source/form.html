@@ -102,7 +102,7 @@
           </fieldset>
 
           <!-- Радиокнопки -->
-          <fieldset class="feedback__group feedback__group-radio">
+          <fieldset class="feedback__group feedback__group-radio feedback__group-radioline">
             <legend class="feedback__legend">Ваше Общее впечатление:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
@@ -131,9 +131,9 @@
           </fieldset>
 
           <!-- Чекбоксы -->
-          <fieldset class="feedback__group feedback__group-checkbox">
+          <fieldset class="feedback__group feedback__group-checkbox feedback__group-checkboxline">
             <legend class="feedback__legend">посещенные&nbsp;<br>достопримечательности:</legend>
-            <ul class="feedback__list">
+            <ul class="feedback__list feedback__list-checkbox">
               <li class="feedback__item">
                 <label class="feedback__control">
                   <input class="visually-hidden feedback__control-input" type="checkbox" name="diablo" checked>
@@ -166,8 +166,8 @@
           </fieldset>
 
           <!-- Свободное поле -->
-          <fieldset class="feedback__group feedback__group-textarea">
-            <legend class="feedback__legend">Опишите свои эмоции:</legend>
+          <fieldset class="feedback__group feedback__group-textarea feedback__group-textarealine">
+            <legend class="feedback__legend feedback__legend-textarea">Опишите свои эмоции:</legend>
             <label class="visually-hidden">Текстовое поле ввода</label>
             <textarea class="feedback__input feedback__input-textarea" name="textarea"
               placeholder="Опишите подробно все свои восторги"></textarea>
@@ -181,9 +181,9 @@
 
 
     <!-- Футер -->
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--form">
       <a class="page-footer__hashtag" href="#">#visitSEDONA</a>
-      <ul class="page-footer__socilal">
+      <ul class="page-footer__socilal page-footer__socilal--form">
         <li class="page-footer__item">
           <a class="page-footer__social-link" href="#">
             <svg width="24" height="24" fill="none">
@@ -222,7 +222,7 @@
   <!-- Модальные окна -->
   <div class="modal modal--invalid modal--closed">
     <section class="modal__wrapper modal__wrapper--invalid">
-      <h2 class="modal__title modal__title--invalid">ЧТО-ТО ПОШЛО <br class="line-break--tab-ds">НЕ ТАК!</h2>
+      <h2 class="modal__title modal__title--invalid">ЧТО-ТО ПОШЛО&nbsp;<br class="line-break--tab-ds">НЕ ТАК!</h2>
       <p class="modal__description modal__description--invalid">Проверьте поля, выделенные красным, скорее всего вы
         забыли их заполнить</p>
       <button class="modal__button modal__button--invalid" type="button">OK</button>
