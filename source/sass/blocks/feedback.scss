@@ -59,8 +59,8 @@
       padding-left: 42px;
     }
 
-    @media (min-width: var.$tablet-width) {
-      padding-left: 45px;
+    @media (min-width: var.$desktop-width) {
+      padding-left: 64px;
     }
   }
 
@@ -337,6 +337,7 @@
 }
 
 .feedback__input {
+  margin: 0;
   padding: 16px;
   font-weight: 700;
   font-size: var.$big-font-size;
