@@ -497,6 +497,11 @@ input[type="checkbox"]:checked + .feedback__control-mark-checkbox::before {
   }
 }
 
+.feedback__control-input:focus + .feedback__control-mark {
+  outline: 1px solid #000000;
+  outline-offset: 2px;
+}
+
 .feedback__control-label {
   font-weight: 700;
   font-size: var.$big-font-size;
