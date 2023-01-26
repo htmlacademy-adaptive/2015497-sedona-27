@@ -67,6 +67,18 @@
   }
 }
 
+.catalog__photo-link {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .catalog__photo {
   width: 100%;
   height: auto;
@@ -82,8 +94,10 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    position: relative;
-    margin-top: -80px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
     color: var.$white;
     background-color: rgba(0, 0, 0, 0.3);
   }

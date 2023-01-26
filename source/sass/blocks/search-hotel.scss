@@ -1,7 +1,7 @@
 @use "../global/var.scss";
 @use "../global/mixins.scss";
 
-.serch-hotel__content {
+.search-hotel__content {
   padding: 40px 18px 49px;
 
   @media (min-width: var.$tablet-width) {
