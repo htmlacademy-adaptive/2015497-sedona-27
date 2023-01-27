@@ -22,7 +22,7 @@
       <a class="main-header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип Седоны." width="185" height="96">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="main-nav__burger"></span>
@@ -48,24 +48,23 @@
 
 
     <main class="main-container">
-      <div class="main-container__hero-bg main-container__hero-bg--catalog"></div>
 
       <!-- Интро -->
       <section class="form-intro">
+        <h1 class="visually-hidden">Седона</h1>
         <svg class="form-intro__hero" width="229" height="39" fill="none">
           <use href="img/sprite.svg#catalog-hero"></use>
         </svg>
-
-        <h1 class="form-intro__title">Оставьте свой отзыв</h1>
-        <p class="form-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них,&nbsp;<br
-            class="line-break line-break--tab-ds">а также о посещенных
-          вами достопримечательностях</p>
       </section>
 
 
       <!-- Форма -->
       <section class="feedback">
-        <h2 class="visually-hidden">Форма отзыва</h2>
+        <h2 class="feedback__title">Оставьте свой отзыв</h2>
+        <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них,&nbsp;<br
+          class="line-break line-break--tab-ds">а также о посещенных
+        вами достопримечательностях</p>
+
         <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
 
           <!-- ФИО -->
@@ -242,6 +241,7 @@
       </div>
     </section>
   </div>
+
   <script src="js/script-burger.js"></script>
 </body>
 

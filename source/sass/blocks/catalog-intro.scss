@@ -3,8 +3,7 @@
 .catalog-intro {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 
   @media (max-width: 767px) {
     padding: 52px 0 37px;
@@ -36,53 +35,36 @@
   &::after {
     position: absolute;
     left: 0;
-    bottom: 189px;
+    bottom: 37px;
     width: 100%;
     height: 57px;
     background: url("../../img/devider-mobile.svg") no-repeat;
     content: "";
 
     @media (min-width: var.$tablet-width) {
-      bottom: 247px;
+      bottom: 66px;
       background: url("../../img/devider-tablet.svg") no-repeat;
     }
 
     @media (min-width: var.$desktop-width) {
-      bottom: 287px;
+      bottom: 97px;
       background: url("../../img/devider-desktop.svg") no-repeat;
     }
   }
+
+  background-color: #889fbd;
 }
 
 .catalog-intro__hero {
-  margin-bottom: 104px;
+  margin-bottom: 67px;
 
   @media (min-width: var.$tablet-width) {
     width: 457px;
     height: 78px;
-    margin-bottom: 183px;
+    margin-bottom: 103px;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin-bottom: 220px;
+    margin-bottom: 130px;
   }
-}
-
-.catalog-intro__title {
-  margin-bottom: 27px;
-  font-weight: 700;
-  font-size: var.$big-font-size;
-  line-height: var.$big-font-height;
-  text-transform: uppercase;
-
-  @media (min-width: var.$tablet-width) {
-    margin-bottom: 32px;
-    font-size: 30px;
-  }
-}
-
-.catalog-intro__description {
-  text-align: center;
-  text-transform: uppercase;
-  color: var.$gray-dark;
 }

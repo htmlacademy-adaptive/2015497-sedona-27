@@ -22,7 +22,7 @@
       <a class="main-header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип Седоны." width="185" height="96">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="main-nav__burger"></span>
@@ -47,24 +47,23 @@
     </header>
 
     <main class="main-container">
-      <div class="main-container__hero-bg main-container__hero-bg--catalog"></div>
 
       <!-- Интро -->
       <section class="catalog-intro">
+        <h1 class="visually-hidden">Седона</h1>
         <svg class="catalog-intro__hero" width="229" height="39" fill="none">
           <use href="img/sprite.svg#catalog-hero"></use>
         </svg>
-
-        <h1 class="catalog-intro__title">Фото и видео</h1>
-        <p class="catalog-intro__description">Не можете решиться на путешествие&nbsp;<br
-            class="line-break line-break--mobile">из-за курса?&nbsp;<br class="line-break line-break--tab-ds">
-          Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
 
 
       <!-- Фотографии -->
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог фотографий</h2>
+        <h2 class="catalog__main-title">Фото и видео</h2>
+        <p class="catalog__description">Не можете решиться на путешествие&nbsp;<br
+            class="line-break line-break--mobile">из-за курса?&nbsp;<br class="line-break line-break--tab-ds">
+          Фотографии помогут вам забыть о политике и экономике.</p>
+
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__photo-link" href="#">

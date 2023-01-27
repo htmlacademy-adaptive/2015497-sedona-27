@@ -87,9 +87,19 @@
     display: none;
   }
 
-  .site-list {
+  .main-nav__list {
     position: static;
-    display: block;
-    min-height: 0;
+  }
+}
+
+.main-nav--closed {
+  .site__list {
+    display: none;
+  }
+}
+
+.main-nav--opened.main-nav--nojs {
+  .site__list {
+    position: static;
   }
 }

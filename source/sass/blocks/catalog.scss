@@ -13,6 +13,35 @@
   }
 }
 
+.catalog__main-title {
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
+}
+
+.catalog__description {
+  margin-bottom: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 89px;
+  }
+}
+
 .catalog__list {
   @media (min-width: var.$tablet-width) {
     display: grid;
