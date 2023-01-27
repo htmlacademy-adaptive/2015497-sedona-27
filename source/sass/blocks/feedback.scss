@@ -14,6 +14,41 @@
   }
 }
 
+.feedback__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: var.$big-font-size;
+  line-height: var.$big-font-height;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 28px;
+    line-height: var.$big-font-height;
+  }
+}
+
+.feedback__description {
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var.$gray-dark;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 100px;
+    line-height: 24px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 68px;
+  }
+}
+
 .feedback__form {
   @media (min-width: var.$tablet-width) {
     display: grid;
